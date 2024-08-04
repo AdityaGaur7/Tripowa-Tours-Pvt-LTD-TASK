@@ -8,6 +8,8 @@ const TravelPage = () => {
   const router = useRouter();
   const popular = Data.popular;
   const handleProductClick = (id) => {
+  
+    
     router.push(`/product/${id}`);
   };
 
@@ -84,7 +86,7 @@ const TravelPage = () => {
             src={location.imageUrl}
             alt={location.place}
             className="w-60 h-60 rounded-lg object-cover cursor-pointer max-w-xs"
-            onClick={() => handleProductClick(index)}
+            onClick={() => handleProductClick(popular.length -1 -index)}
           />
               <div className="flex justify-between items-center mt-2">
                 <p className="text-sm font-semibold">{location.place}</p>
